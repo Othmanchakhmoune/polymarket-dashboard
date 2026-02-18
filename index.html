@@ -24,13 +24,7 @@
         <!-- Nav Tabs -->
         <ul class="nav nav-tabs" id="dashboardTabs" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="alpha-tab" data-bs-toggle="tab" data-bs-target="#alpha" type="button" role="tab" aria-controls="alpha" aria-selected="true">Alpha Monitor</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="backtest-tab" data-bs-toggle="tab" data-bs-target="#backtest" type="button" role="tab" aria-controls="backtest" aria-selected="false">Backtest Summary</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="trade-tab" data-bs-toggle="tab" data-bs-target="#trade" type="button" role="tab" aria-controls="trade" aria-selected="false">Strategies</button>
+                <button class="nav-link active" id="trade-tab" data-bs-toggle="tab" data-bs-target="#trade" type="button" role="tab" aria-controls="trade" aria-selected="true">Strategies</button>
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="comparison-tab" data-bs-toggle="tab" data-bs-target="#comparison" type="button" role="tab" aria-controls="comparison" aria-selected="false">Strategy Comparison</button>
@@ -39,67 +33,10 @@
 
         <!-- Tab Content -->
         <div class="tab-content mt-4" id="dashboardTabContent">
-            <div class="tab-pane fade show active" id="alpha" role="tabpanel" aria-labelledby="alpha-tab">
-                <div class="card">
-                    <div class="card-header bg-primary text-white">Alpha Monitor (Adam)</div>
-                    <div class="card-body">
-                        <h5>Top Opportunity: US-Iran Strike Markets</h5>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Feb 28 strike odds: <strong>19%</strong> (underpriced)</li>
-                            <li class="list-group-item">March 15 odds: <strong>32%</strong> (better risk/reward)</li>
-                            <li class="list-group-item">Total volume: <strong>$282M</strong></li>
-                            <li class="list-group-item">Confidence: <strong>8.5/10</strong></li>
-                        </ul>
-                        <p>Monitoring: News, AI sentiment divergences, whale activity, narrative front-runs.</p>
-                        <div class="chart-container">
-                            <canvas id="confidenceChart"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="tab-pane fade" id="backtest" role="tabpanel" aria-labelledby="backtest-tab">
+            <div class="tab-pane fade show active" id="trade" role="tabpanel" aria-labelledby="trade-tab">
                 <div class="card">
-                    <div class="card-header bg-success text-white">Backtest Summary (Luke)</div>
-                    <div class="card-body">
-                        <p>Strategies tested: Late-entry TBO divergence, Contrarian AI sentiment fades, Whale tracking.</p>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="card text-center">
-                                    <div class="card-body">
-                                        <h4 class="card-title text-primary">62%</h4>
-                                        <p class="card-text">Win Rate</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card text-center">
-                                    <div class="card-body">
-                                        <h4 class="card-title text-primary">1.8</h4>
-                                        <p class="card-text">Sharpe Ratio</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card text-center">
-                                    <div class="card-body">
-                                        <h4 class="card-title text-primary">12%</h4>
-                                        <p class="card-text">Max Drawdown</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <p>Script: <a href="luke_backtester.py" class="btn btn-outline-primary">View luke_backtester.py</a></p>
-                        <div class="chart-container">
-                            <canvas id="backtestChart"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tab-pane fade" id="trade" role="tabpanel" aria-labelledby="trade-tab">
-                <div class="card">
-                    <div class="card-header bg-warning text-white">Paper Trade Tracker</div>
+                    <div class="card-header bg-warning text-white">Strategies</div>
                     <div class="card-body">
                         <h5>Current Balance: $<span id="balance">Loading...</span></h5>
                         <div class="chart-container">
