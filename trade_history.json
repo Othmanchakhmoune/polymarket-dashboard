@@ -1,0 +1,13 @@
+[
+  {
+    "timestamp": "2026-02-18T04:36:07.590151Z",
+    "contract": "US-Iran Strike (Feb 28)",
+    "odds": 0.19,
+    "stake": 20,
+    "outcome": "No",
+    "payout": 0.0,
+    "profit": -20.0,
+    "balance": 80.0,
+    "circuit_breaker": "active"
+  }
+]
