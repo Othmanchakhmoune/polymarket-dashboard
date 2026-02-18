@@ -30,7 +30,10 @@
                 <button class="nav-link" id="backtest-tab" data-bs-toggle="tab" data-bs-target="#backtest" type="button" role="tab" aria-controls="backtest" aria-selected="false">Backtest Summary</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="trade-tab" data-bs-toggle="tab" data-bs-target="#trade" type="button" role="tab" aria-controls="trade" aria-selected="false">Trade Tracker</button>
+                <button class="nav-link" id="trade-tab" data-bs-toggle="tab" data-bs-target="#trade" type="button" role="tab" aria-controls="trade" aria-selected="false">Strategies</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="comparison-tab" data-bs-toggle="tab" data-bs-target="#comparison" type="button" role="tab" aria-controls="comparison" aria-selected="false">Strategy Comparison</button>
             </li>
         </ul>
 
@@ -155,6 +158,23 @@
                             </thead>
                             <tbody id="trade-history"></tbody>
                         </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="comparison" role="tabpanel" aria-labelledby="comparison-tab">
+                <div class="card">
+                    <div class="card-header bg-info text-white">Strategy Performance Comparison</div>
+                    <div class="card-body">
+                        <div class="chart-container">
+                            <canvas id="winRateChart"></canvas>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="sharpeChart"></canvas>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="profitChart"></canvas>
+                        </div>
                     </div>
                 </div>
             </div>
